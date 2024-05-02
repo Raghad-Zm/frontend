@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course: Web Development Basics</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="light-mode">
+  <header>
+    <h1>Welcome to Our Course: Web Development Basics</h1>
+  </header>
+  <div class="navbar">
+    <a href="#" onclick="showTap('home')">Home</a>
+    <a href="#" onclick="showTap('about')">About</a>
+    <div class="checkbox-wrapper-54">
+      <label class="switch">
+        <input id="modeSwitch" type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+  <div class="articles">
+    <div id="article1" class="article">
+      <h2>Introduction to HTML</h2>
+      <p>HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages and web
+        applications. HTML describes the structure of a web page semantically and originally included cues for the
+        appearance of the document.
+        HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as
+        interactive forms may be embedded into the rendered page. It provides a means to create structured documents by
+        denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML
+        elements are delineated by tags, written using angle brackets.
+    </div>
+    <div id="article2" class="article">
+      <h2>CSS Basics</h2>
+      <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or
+        in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External
+        stylesheets are stored in CSS files.
+        With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are
+        positioned and laid out, what background images or background colors are used, different displays for different
+        devices and screen sizes, and much more.</p>
+    </div>
+    <div id="article3" class="article">
+      <h2>Advanced JavaScript Programming</h2>
+      <p>Take your JavaScript skills to the next level with this advanced course. Learn about closures, prototypes,
+        asynchronous programming,
+        and ES6 features to build dynamic and interactive web applications.</p>
+    </div>
+  </div>
+
+  <script>
+    const modeSwitch = document.getElementById('modeSwitch');
+    const body = document.body;
+
+    modeSwitch.addEventListener('change', () => {
+      if (modeSwitch.checked) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+      } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+      }
+    });
+  </script>
+</body>
+
+</html>
